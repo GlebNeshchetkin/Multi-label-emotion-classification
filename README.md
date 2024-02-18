@@ -11,3 +11,26 @@ The classifier consists of a feed-forward neural network with multiple hidden la
 ### Training loop
 Training loop for a sentiment classification model utilizes CrossEntropyLoss, Adam optimizer, and a MultiStepLR scheduler for learning rate adjustment. The loop iterates over 40 epochs, updating model parameters on a provided dataset.
 ## <kbd style="background-color: #0074cc; color: #fff; border-radius: 50%; padding: 4px 8px;">2</kbd> Emotion classification model
+## Results
+### Model without boosting (M1) versus Model with boosting (M2)
+| Model     |  ACC  |   F1  |
+|-----------|-------|-------|
+|    M1     | 0.000 | 0.000 |
+|    M2     | 0.000 | 0.000 |
+
+### Comparison of different models
+| Model     |  ACC  |   F1  |
+|-----------|-------|-------|
+| SpanEmo   | 0.601 | 0.713 |
+| BERT+DK   | 0.591 | 0.713 |
+| DATN-1    | 0.582 | 0.543 |
+| My model  | 0.000 | 0.000 |
+
+## References
+**SpanEmo Model** \
+SpanEmo: Casting Multi-label Emotion Classification as Span-prediction (Alhuzali & Ananiadou, EACL 2021), \
+https://aclanthology.org/2021.eacl-main.135.pdf \
+**BERT+DK Model** \
+Improving Multi-label Emotion Classification by Integrating both General and Domain-specific Knowledge (Ying et al., WNUT 2019), https://aclanthology.org/D19-5541.pdf \
+**DATN-1 Model** \
+Improving Multi-label Emotion Classification via Sentiment Classification with Dual Attention Transfer Network (Yu et al., EMNLP 2018), https://aclanthology.org/D18-1137.pdf
